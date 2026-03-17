@@ -99,10 +99,10 @@ Return ONLY a vCard 2.1 string.
                 io.BytesIO(vcard_to_save.encode()),
                 mimetype='text/vcard',
                 as_attachment=True,
-                download_name=filename
+                attachment_filename=filename
             )
     return HTML_TEMPLATE
 
 if __name__ == '__main__':
     # host='0.0.0.0' allows connections from your phone on the same network
-    app.run(host='0.0.0.0', port=5000)
+    app.run(host='0.0.0.0', port=80)
